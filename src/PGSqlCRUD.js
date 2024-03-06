@@ -1,15 +1,14 @@
 const express = require('express');
 const Sequelize = require('sequelize');
 const app = express();
-const cors = require('cors');
 
 app.use(express.json());
-app.use(cors());
 
-const dbUrl = 'postgres://webadmin:BTSlac35188@node57085-kotchapun-noderest.proen.app.ruk-com.cloud:11817/Books';
+const dbUrl = 'postgres://webadmin:BTSlac35188@node57085-kotchapun-noderest.proen.app.ruk-com.cloud/Books';
 //const dbUrl = "https://node57080-supisara-noderest.proen.app.ruk-com.cloud";
 
 const sequelize = new Sequelize(dbUrl);
+
 /*const sequelize = new Sequelize('database','username','password',{
     host: 'localhost',
     dialect: 'sqlite',
